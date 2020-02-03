@@ -4,7 +4,7 @@ Given an array of integers, return indices of the two numbers such that they add
 [Subset sum problem - Wikipedia](https://en.wikipedia.org/wiki/Subset_sum_problem)
 
 ## Assumptions
-* There are no repeat elements in the list.
+* You may not use the same element twice.
 * There is exactly one solution.
 
 ## Example Test Case
