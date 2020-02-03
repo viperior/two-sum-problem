@@ -25,4 +25,5 @@ class Solution:
         
 solution_a = Solution().two_sum(list(range(1, 6)), 3)
 solution_b = Solution().two_sum(list(range(1, 8)), 6)
-solution_c = Solution().two_sum(list(range(8900, 100001, 21)), 93316)
+solution_c = Solution().two_sum([3, 3], 6)
+#solution_d = Solution().two_sum(list(range(8900, 100001, 21)), 93316)
