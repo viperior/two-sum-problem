@@ -4,14 +4,18 @@ class Solution:
     def two_sum(self, nums: List[int], target: int) -> List[int]:
         operand_a_list = nums[:]
         
-        # Remove operands that are not possible due to being greater than the sum.
+        # Determine if input list contains negative numbers.
+        contains_negative_numbers = False
+        
         for value in nums:
-            # Abort optimization method if a negative number is detected.
             if value < 0:
-                break
-            
-            if value >= target and target > 1:
-                operand_a_list.remove(value)
+                contains_negative_numbers = True
+        
+        # Remove operands that are not possible due to being greater than the sum.
+        if contains_negative_numbers == False:
+            for value in nums:
+                if value >= target and target > 1:
+                    operand_a_list.remove(value)
         
         for i, operand_a in enumerate(operand_a_list):
             # Remove operand a from the list of operand b's to evaluate.
@@ -51,11 +55,12 @@ tests = [
     [list(range(1, 8)), 6],
     [[3, 3], 6],
     [list(range(8900, 100001, 21)), 93316],
-    [[0,4,3,0], 0],
-    [[0,4,3,1], 1],
+    [[0, 4, 3, 0], 0],
+    [[0, 4, 3, 1], 1],
     [[5, 5, 6, 7, 6, 9, 15, 27], 12],
-    [[-10,7,19,15], 9],
-    [[-10, -10, -20, -5, 50, 13], -20]
+    [[-10, 7, 19, 15], 9],
+    [[-10, -10, -20, -5, 50, 13], -20],
+    [[3, 2, 95, 4, -3], 92]
 ]
 
 for i, test in enumerate(tests):
