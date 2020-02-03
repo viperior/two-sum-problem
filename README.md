@@ -6,6 +6,7 @@ Given an array of integers, return indices of the two numbers such that they add
 ## Assumptions
 * You may not use the same element twice.
 * There is exactly one solution.
+* Elements can be negative or positive.
 
 ## Example Test Case
 ### Inputs
