@@ -4,11 +4,15 @@ class Solution:
     def two_sum(self, nums: List[int], target: int) -> List[int]:
         operand_a_list = nums[:]
         
+        # Remove operands that are not possible due to being greater than the sum.
+        # This would not be valid if negative numbers were allowed.
         for value in nums:
             if value >= target:
                 operand_a_list.remove(value)
         
+        
         for i, value in enumerate(operand_a_list):
+            # Remove operand a from the list of operand b's to evaluate.
             operand_b_list = operand_a_list[:]
             operand_b_list.remove(value)
             
