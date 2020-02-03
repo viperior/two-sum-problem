@@ -5,8 +5,11 @@ class Solution:
         operand_a_list = nums[:]
         
         # Remove operands that are not possible due to being greater than the sum.
-        # This would not be valid if negative numbers were allowed.
         for value in nums:
+            # Abort optimization method if a negative number is detected.
+            if value < 0:
+                break
+            
             if value >= target and target > 1:
                 operand_a_list.remove(value)
         
@@ -50,7 +53,8 @@ tests = [
     [list(range(8900, 100001, 21)), 93316],
     [[0,4,3,0], 0],
     [[0,4,3,1], 1],
-    [[5, 5, 6, 7, 6, 9, 15, 27], 12]
+    [[5, 5, 6, 7, 6, 9, 15, 27], 12],
+    [[-10,7,19,15], 9]
 ]
 
 for i, test in enumerate(tests):
