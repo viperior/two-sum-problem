@@ -1,14 +1,14 @@
 # two-sum-problem
 Given an array of integers, return indices of the two numbers such that they add up to a specific target.
 
-## Assumptions:
+## Assumptions
 * There are no repeat elements in the list.
 * There is exactly one solution.
 
 ## Example Test Case
-Inputs:
+### Inputs
 * List of integers = [1, 2, 3, 4, 5, 6, 7]
 * Target sum = 6
 
-Output:
-* [0, 4], because 1 + 5 = 6
+### Output
+[0, 4], because 1 + 5 = 6
