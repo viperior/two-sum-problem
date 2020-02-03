@@ -7,9 +7,8 @@ class Solution:
         # Remove operands that are not possible due to being greater than the sum.
         # This would not be valid if negative numbers were allowed.
         for value in nums:
-            if value >= target:
+            if value >= target and target > 1:
                 operand_a_list.remove(value)
-        
         
         for i, operand_a in enumerate(operand_a_list):
             # Remove operand a from the list of operand b's to evaluate.
@@ -49,3 +48,4 @@ solution_a = Solution().two_sum(list(range(1, 6)), 3)
 solution_b = Solution().two_sum(list(range(1, 8)), 6)
 solution_c = Solution().two_sum([3, 3], 6)
 solution_d = Solution().two_sum(list(range(8900, 100001, 21)), 93316)
+solution_e = Solution().two_sum([0,4,3,0], 0)
