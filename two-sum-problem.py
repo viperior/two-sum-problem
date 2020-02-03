@@ -29,7 +29,6 @@ class Solution:
                         operand_b_index = nums.index(operand_b)
                     
                     solution_indices = [operand_a_index, operand_b_index]
-                    self.display_solution(solution_indices, nums, target)
                     return solution_indices
                     
     def display_solution(self, solution_indices, nums, target):
@@ -42,10 +41,18 @@ class Solution:
             print(str(nums))
         
         print('Solution indices: ' + str(solution_indices))
-        print(str(nums[solution_indices[0]]) + ' + ' + str(nums[solution_indices[1]]) + ' = ' + str(target))
-        
-solution_a = Solution().two_sum(list(range(1, 6)), 3)
-solution_b = Solution().two_sum(list(range(1, 8)), 6)
-solution_c = Solution().two_sum([3, 3], 6)
-solution_d = Solution().two_sum(list(range(8900, 100001, 21)), 93316)
-solution_e = Solution().two_sum([0,4,3,0], 0)
+        print(str(nums[solution_indices[0]]) + ' + ' + str(nums[solution_indices[1]]) + ' = ' + str(target) + '\n')
+
+tests = [
+    [list(range(1, 6)), 3],
+    [list(range(1, 8)), 6],
+    [[3, 3], 6],
+    [list(range(8900, 100001, 21)), 93316],
+    [[0,4,3,0], 0],
+    [[0,4,3,1], 1],
+    [[5, 5, 6, 7, 6, 9, 15, 27], 12]
+]
+
+for i, test in enumerate(tests):
+    print('Test case #' + str(i + 1))
+    Solution().display_solution(Solution().two_sum(test[0], test[1]), test[0], test[1])
