@@ -10,8 +10,8 @@ Given an array of integers, return indices of the two numbers such that they add
 
 ## Example Test Case
 ### Inputs
-* List of integers = [1, 2, 3, 4, 5, 6, 7]
-* Target sum = 6
+* List of integers = [3, 2, 95, 4, -3]
+* Target sum = 92
 
 ### Output
-[0, 4], because 1 + 5 = 6
+[2, 4], because 95 + -3 = 92
